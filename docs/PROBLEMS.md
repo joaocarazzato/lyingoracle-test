@@ -6,7 +6,7 @@ Este documento descreve os principais desafios encontrados durante a implementa�
 
 ### Descrição do Problema
 
-O desafio especifica que o oráculo deve começar a mentir após t=200 passos. No entanto, com um intervalo de apenas 1-100 e usando busca binária eficiente, o agente consegue encontrar o número oculto em **aproximadamente 7 passos** (log₂(100) ≈ 6.64).
+O desafio especifica que o oráculo deve começar a mentir após t=200 passos. No entanto, com um intervalo de apenas 1-100 e usando busca binária eficiente, o agente consegue encontrar o número oculto em **aproximadamente 7 passos** (log(100) ≈ 6.64).
 
 Isso significa que o episódio termina muito antes de atingir t=200, tornando **impossível testar a funcionalidade de detecção de mentiras** do agente - que é justamente o core do desafio!
 
