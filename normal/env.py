@@ -4,7 +4,7 @@ from verifiers.types import Messages, State
 import verifiers as vf
 
 class LyingOracleEnv(vf.MultiTurnEnv):
-    def __init__(self, lowest_number, max_number, max_steps: int = 100, hidden: int = None):
+    def __init__(self, lowest_number, max_number, max_steps: int = 500, hidden: int = None):
         self.lowest_number = lowest_number if lowest_number is not None else 1
         self.max_number = max_number if max_number is not None else 100
         self.hidden = hidden if hidden is not None else random.randint(self.lowest_number, self.max_number)
@@ -15,7 +15,7 @@ class LyingOracleEnv(vf.MultiTurnEnv):
         print(f"[DEBUG] Hidden number is {self.hidden}")
 
     def step(self, action: int):
-        liar_oracle_threshold = 4  # Muda mais cedo para testar
+        liar_oracle_threshold = 200
 
         self.t += 1
 
